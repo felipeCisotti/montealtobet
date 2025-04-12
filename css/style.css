@@ -182,7 +182,10 @@ header h1:hover{
     align-items: flex-end;
     justify-content: space-evenly;
     gap: 20px;
-    overflow-x: hidden; /* previne scroll fora do mobile */
+    overflow-x: auto; /* Permite rolar o carrossel */
+    padding-bottom: 20px; /* Adiciona espaço extra para rolagem */
+    scroll-snap-type: x mandatory; /* Melhor controle de rolagem */
+    -webkit-overflow-scrolling: touch; /* Para melhorar a experiência no mobile */
 }
 
 .sports-container h3 {
@@ -195,12 +198,13 @@ header h1:hover{
     width: 450px;
     height: 370px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 0; /* removido para prevenir quebra no carrossel */
+    visibility: visible; /* Certifique-se de que os cards estão visíveis */
+    margin: 0; /* Remove margem para evitar quebra no carrossel */
+    scroll-snap-align: start; /* Alinha os cards ao rolar */
 }
 
 .sport img {
     max-width: 100%;
-    width: 450px;
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -208,41 +212,7 @@ header h1:hover{
 
 .sport p {
     padding: 8px 20px;
-    flex: 1;
-}
-
-/* 📱 Responsivo: carrossel */
-@media (max-width: 768px) {
-    .sports-container {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 16px;
-        padding: 20px;
-        justify-content: initial; /* remove o space-evenly no mobile */
-    }
-
-    .sport {
-        flex: 0 0 85%;
-        scroll-snap-align: center;
-        width: auto;
-        height: auto;
-        margin: 0;
-    }
-
-    .sport img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.sports-container::-webkit-scrollbar {
-    display: none;
-}
-.sports-container {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    flex: 1
 }
 
 .brazilian-league h2{
