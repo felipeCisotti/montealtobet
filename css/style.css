@@ -115,11 +115,18 @@ header h1:hover{
     justify-content: center;
 }
 
-#services{
+#services {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+    #services {
+        padding-top: 50px; /* ou outro valor mais confortável para mobile */
+    }
 }
 
 #featured-bets h2{
