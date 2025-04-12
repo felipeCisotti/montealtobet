@@ -212,6 +212,29 @@ header h1:hover{
     flex: 1;
 }
 
+@media (max-width: 768px) {
+    .sports-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+        padding: 0 10px;
+    }
+
+    .sport {
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        margin: 20px 0;
+        width: auto;
+    }
+
+    .sport img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .brazilian-league h2{
     display: flex;
     justify-content: center;
