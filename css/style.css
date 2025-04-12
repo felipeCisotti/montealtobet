@@ -223,7 +223,7 @@ header h1:hover{
     }
 
     .sport {
-        flex: 0 0 85%; /* ocupa 85% da tela, permitindo scroll */
+        flex: 0 0 90%;
         scroll-snap-align: center;
         margin: 0;
         width: auto;
@@ -233,8 +233,6 @@ header h1:hover{
     .sport img {
         width: 100%;
         height: auto;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
     }
 }
 
