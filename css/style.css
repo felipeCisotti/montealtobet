@@ -170,25 +170,36 @@ header h1:hover{
     font-size: 14px;
 }
 
-.section-bg h2{
+.section-bg h2 {
     display: flex;
     justify-content: center;
     margin-top: 100px;
     visibility: hidden;
 }
 
-.sports-container{
+.sports-container {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
     gap: 20px;
+    overflow-x: hidden; /* previne scroll fora do mobile */
 }
 
-.sports-container h3{
+.sports-container h3 {
     justify-self: flex-start;
 }
 
-.sport img{
+.sport {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 450px;
+    height: 370px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    visibility: hidden;
+    margin: 0; /* removido para prevenir quebra no carrossel */
+}
+
+.sport img {
     max-width: 100%;
     width: 450px;
     height: auto;
@@ -196,22 +207,12 @@ header h1:hover{
     border-top-right-radius: 8px;
 }
 
-.sport{
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 450px;
-    height: 370px;
-    margin: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    visibility: hidden;
-}
-
-.sport p{
+.sport p {
     padding: 8px 20px;
     flex: 1;
 }
 
+/* 📱 Responsivo: carrossel */
 @media (max-width: 768px) {
     .sports-container {
         overflow-x: auto;
@@ -220,20 +221,29 @@ header h1:hover{
         flex-wrap: nowrap;
         gap: 16px;
         padding: 20px;
+        justify-content: initial; /* remove o space-evenly no mobile */
     }
 
     .sport {
-        flex: 0 0 90%;
+        flex: 0 0 85%;
         scroll-snap-align: center;
-        margin: 0;
         width: auto;
         height: auto;
+        margin: 0;
     }
 
     .sport img {
         width: 100%;
         height: auto;
     }
+}
+
+.sports-container::-webkit-scrollbar {
+    display: none;
+}
+.sports-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .brazilian-league h2{
