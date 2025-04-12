@@ -292,6 +292,35 @@ header h1:hover{
     width: 200px;
 }
 
+@media (max-width: 768px) {
+    .brazilian-league-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .brazilian-bet-images {
+        flex-direction: column;
+    }
+
+    .brazilian-bet-images img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .brazilian-bet button {
+        font-size: 16px;
+    }
+
+    .brazilian-league h2 {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 22px;
+    }
+}
+
 #testemunhas{
     width: 95%;
     visibility: hidden;
