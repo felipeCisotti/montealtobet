@@ -195,7 +195,6 @@ header h1:hover{
     width: 450px;
     height: 370px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    visibility: hidden;
     margin: 0; /* removido para prevenir quebra no carrossel */
 }
 
