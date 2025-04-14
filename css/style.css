@@ -398,7 +398,7 @@ footer {
 }
 
 .b1 a{
-    background-color: #333;
+    background-color: #333333;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -406,7 +406,7 @@ footer {
 }
 
 .b2 a{
-    background-color: #333;
+    background-color: #333333;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -414,5 +414,6 @@ footer {
 }
 
 .botao a:hover{
-    color: #FF0000;
+    color: white;
+    background-color: #4F4F4F;
 }
